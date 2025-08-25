@@ -495,7 +495,7 @@ def patchAsyncio():
     nest_asyncio.apply()
 
 
-@functools.cache
+# @functools.cache this cause error in sub-thread when close the thread
 def getLoop():
     """Get asyncio event loop or create one if it doesn't exist."""
     try:

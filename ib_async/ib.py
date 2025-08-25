@@ -632,7 +632,7 @@ class IB:
         Args:
             contract: Contract to get ticker for.
         """
-        return self.wrapper.tickers.get(hash(contract))
+        return self.wrapper.tickers.get(id(contract))
 
     def tickers(self) -> list[Ticker]:
         """Get a list of all tickers."""
